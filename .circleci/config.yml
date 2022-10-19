@@ -68,8 +68,6 @@ jobs:
             dockerpath=capstoneimage/capstone
             docker tag $TAG $dockerpath
             docker push $dockerpath
-            echo 'Pushed Docker image into Docker Hub'
-            docker image ls
 
 workflows:
   default:
