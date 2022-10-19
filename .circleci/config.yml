@@ -80,6 +80,7 @@ jobs:
         type: string
     steps:
       - checkout
+      - kubernetes/install
       - aws-eks/update-kubeconfig-with-authenticator:
           cluster-name: << parameters.cluster-name >>
           install-kubectl: true
@@ -91,10 +92,10 @@ jobs:
 workflows:
   default:
     jobs:
-       - lint
-       - Docker-image-build-and-push:
-            requires: 
-              - lint
+      #  - lint
+      #  - Docker-image-build-and-push:
+      #       requires: 
+      #         - lint
        - aws-eks/create-cluster:
             cluster-name: capstone
        - create-deployment:
