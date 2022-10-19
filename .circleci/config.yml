@@ -94,7 +94,8 @@ workflows:
     jobs:
        - lint
        - Docker-image-build-and-push:
-            requires: lint
+            requires: 
+              - lint
        - aws-eks/create-cluster:
             cluster-name: capstone
        - create-deployment:
