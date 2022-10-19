@@ -59,7 +59,12 @@ jobs:
           name: Docker Image - List
           command: |
             docker image ls
-
+      - run:
+          name: Push Docker image into Docker Hub
+          command: |
+            echo $DOCKER_USER
+            docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
+            echo 'Logged into docker account'
 
 workflows:
   default:
