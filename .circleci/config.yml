@@ -65,7 +65,7 @@ jobs:
             echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin
             echo 'Logged into docker account'
             TAG=capstone
-            dockerpath=capstoneimage/capstone
+            dockerpath=vijaiananths/capstone
             docker tag $TAG $dockerpath
             docker push $dockerpath
 
