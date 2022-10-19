@@ -72,8 +72,7 @@ jobs:
 
   # Reference from https://circleci.com/developer/orbs/orb/circleci/aws-eks#usage-create-k8s-deployment
   create-deployment:
-    docker:
-      - image: 'cimg/python:3.10'
+    executor: aws-eks/python3
     parameters:
       cluster-name:
         description: |
