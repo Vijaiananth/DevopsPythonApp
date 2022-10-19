@@ -71,6 +71,8 @@ jobs:
             echo 'Pushed image to Hub'
 
   # Reference from https://circleci.com/developer/orbs/orb/circleci/aws-eks#usage-create-k8s-deployment
+  # https://circleci.com/developer/orbs/orb/circleci/aws-eks
+  # https://github.com/CircleCI-Public/circleci-demo-aws-eks
   create-deployment:
     docker:
       - image: 'cimg/python:3.10'
@@ -85,9 +87,11 @@ jobs:
           cluster-name: << parameters.cluster-name >>
           install-kubectl: true
       - kubernetes/create-or-update-resource:
-          resource-file-path: infra.yml
+          resource-file-path: Infra/infra.yml
           resource-name: deployment/capstone
           get-rollout-status: true
+      - kubernetes/create-or-update-resource:
+          resource-file-path: "Infra/service.yml"
 
 workflows:
   default:

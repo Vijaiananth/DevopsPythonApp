@@ -4,7 +4,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: capstone
-  namespace: capstone-app
+  namespace: default
   labels:
     app: capstone
 spec:
@@ -28,21 +28,3 @@ spec:
           name: capstone
           ports:
             - containerPort: 80
-
----
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: capstone-service
-  namespace: capstone-app
-  labels:
-    app: capstone
-spec:
-  ports:
-    - port: 80
-      targetPort: 80
-      protocol: TCP
-  type: LoadBalancer
-  selector:
-    app: capstone

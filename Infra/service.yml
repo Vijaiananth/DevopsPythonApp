@@ -1,0 +1,16 @@
+# https://docs.aws.amazon.com/eks/latest/userguide/network-load-balancing.html
+apiVersion: v1
+kind: Service
+metadata:
+  name: capstone-service
+  namespace: default
+  labels:
+    app: capstone
+spec:
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+  type: LoadBalancer
+  selector:
+    app: capstone
