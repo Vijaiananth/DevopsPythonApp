@@ -84,7 +84,7 @@ jobs:
           cluster-name: << parameters.cluster-name >>
           install-kubectl: true
       - kubernetes/create-or-update-resource:
-          resource-file-path: Infra/infra.yml
+          resource-file-path: infra.yml
           resource-name: deployment/capstone
           get-rollout-status: true
 
