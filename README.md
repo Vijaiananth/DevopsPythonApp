@@ -3,9 +3,9 @@ DevopsPythonApp
 
 In this project, I have set up Devops for a simple Python app.
 
+I have used CircleCI's ORB which creates and updates Kubernetes clusters easily for us in few steps:
 
-
-
+https://circleci.com/developer/orbs/orb/circleci/aws-eks#usage-create-k8s-deployment
 
 ## Files and their purpose
 
