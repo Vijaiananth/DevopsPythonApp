@@ -15,3 +15,5 @@ Rolling Deployment strategy is implemented in this where the Kubernetes cluster 
 2. Dockerfile - File that creates Docker image
 3. Makefile - Contains commands that sets up environment, runs tests and lints.
 4. requirements.txt - Contains list of softwares to be installed in the environment.
+5. Infra/infra.yml - contains configuration for the kubernetes cluster. Here the strategy specified is Rolling update and image pull is always.
+6. Infra/service.yml - contains configuration for load balancer.
