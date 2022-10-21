@@ -17,3 +17,12 @@ Rolling Deployment strategy is implemented in this where the Kubernetes cluster 
 4. requirements.txt - Contains list of softwares to be installed in the environment.
 5. Infra/infra.yml - contains configuration for the kubernetes cluster. Here the strategy specified is Rolling update and image pull is always.
 6. Infra/service.yml - contains configuration for load balancer.
+
+## Steps:
+
+Circle CI will code will implement below steps:
+
+1. Python app.py and Docker file will be linted.
+2. Docker image will be prepared and pushed to Docker hub.
+3. Kubernetes cluster and Load balancer will be created as per the config files.
+4. Docker image will be deployed.
