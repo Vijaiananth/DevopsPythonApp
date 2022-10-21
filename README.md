@@ -6,6 +6,7 @@ In this project, I have set up Devops for a simple Python app.
 Continuous Integration - CircleCI
 Deployment Type - Rolling Deployment
 Kubernetes - AWS Kubernetes
+Image repository - Docker Hub
 
 I have used CircleCI's 'aws-eks' ORB which creates and updates Kubernetes clusters easily for us in few steps:
 
