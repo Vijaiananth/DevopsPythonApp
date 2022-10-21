@@ -101,12 +101,11 @@ workflows:
        - Docker-image-build-and-push:
             requires: 
               - lint
-      #  - aws-eks/create-cluster:
-      #       cluster-name: capstone
-      #       requires: 
-      #         - Docker-image-build-and-push
+       - aws-eks/create-cluster:
+            cluster-name: capstone
+            requires: 
+              - Docker-image-build-and-push
        - create-deployment:
             cluster-name: capstone
             requires:
-              - lint
-              # - aws-eks/create-cluster
+              - aws-eks/create-cluster
