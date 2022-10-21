@@ -110,4 +110,4 @@ workflows:
             requires:
               - lint
               - Docker-image-build-and-push
-              - aws-eks/create-cluster
+              # - aws-eks/create-cluster
