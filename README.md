@@ -3,9 +3,11 @@ DevopsPythonApp
 
 In this project, I have set up Devops for a simple Python app.
 
-I have used CircleCI's ORB which creates and updates Kubernetes clusters easily for us in few steps:
+I have used CircleCI's 'aws-eks' ORB which creates and updates Kubernetes clusters easily for us in few steps:
 
 https://circleci.com/developer/orbs/orb/circleci/aws-eks#usage-create-k8s-deployment
+
+Rolling Deployment strategy is implemented in this where the Kubernetes cluster will be replaced with new changes completely during the deployment.
 
 ## Files and their purpose
 
@@ -13,7 +15,3 @@ https://circleci.com/developer/orbs/orb/circleci/aws-eks#usage-create-k8s-deploy
 2. Dockerfile - File that creates Docker image
 3. Makefile - Contains commands that sets up environment, runs tests and lints.
 4. requirements.txt - Contains list of softwares to be installed in the environment.
-5. make_prediction.sh - sends api request to the running app and gets prediction response.
-6. run_docker.sh - script to build and run docker image
-7. upload_docker.sh - script to upload docker image to docker hub
-8. run_kubernetes.sh - script to set up app and run it on kubernetes cluster
